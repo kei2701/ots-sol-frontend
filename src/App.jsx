@@ -1,7 +1,12 @@
 import Router from "./routes";
+import CustomThemeProvider from "./themes/CustomThemeProvider";
 
 function App() {
-  return <Router />;
+  return (
+    <CustomThemeProvider>
+      <Router />
+    </CustomThemeProvider>
+  );
 }
 
 export default App;
