@@ -4,6 +4,7 @@ import UserLayout from "../layouts/UserLayout";
 import HomePage from "../pages/HomePage";
 import HistoryPage from "../pages/HistoryPage";
 import RankingPage from "../pages/RankingPage";
+import TestingPage from "../pages/TestingPage";
 
 function Router() {
   return useRoutes([
@@ -31,6 +32,10 @@ function Router() {
           path: "/ranking",
           element: <RankingPage />,
         },
+        {
+          path: "/testing",
+          element: <TestingPage />,
+        }
       ],
     },
   ]);

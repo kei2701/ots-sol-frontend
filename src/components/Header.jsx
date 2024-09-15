@@ -1,6 +1,6 @@
 import { Box, CardMedia, Stack, styled, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import banner from "./../assets/OTS_banner.png";
+import banner from "./../assets/OTS_banner_blue.png";
 import VietnamIcon from "./../assets/vietnam.png";
 import CustomTextField from "./CustomTextField";
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,7 +9,7 @@ import CustomButton from "./CustomButton";
 
 const CustomLogo = styled(CardMedia)(() => ({
   backgroundSize: "contain",
-  backgroundColor: "#0077FF",
+  backgroundColor: "#FFFFFF",
   cursor: "pointer",
 }));
 

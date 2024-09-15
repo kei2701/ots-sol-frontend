@@ -1,6 +1,6 @@
 import { CardMedia, MenuItem, Stack, styled, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import logo from "./../assets/OTS_2.png";
+import logo from "./../assets/OTS_logo_blue.png";
 import XIcon from "@mui/icons-material/X";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const CustomLogo = styled(CardMedia)(() => ({
   backgroundSize: "contain",
-  backgroundColor: "#0077FF",
+  backgroundColor: "#FFFFFF",
   cursor: "pointer",
 }));
 
