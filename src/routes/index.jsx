@@ -32,11 +32,12 @@ function Router() {
           path: "/ranking",
           element: <RankingPage />,
         },
-        {
-          path: "/testing",
-          element: <TestingPage />,
-        }
       ],
+    },
+
+    {
+      path: "/testing",
+      element: <TestingPage />,
     },
   ]);
 }
