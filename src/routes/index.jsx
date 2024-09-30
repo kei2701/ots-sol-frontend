@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import HistoryPage from "../pages/HistoryPage";
 import RankingPage from "../pages/RankingPage";
 import TestingPage from "../pages/TestingPage";
+import LoginPage from "../pages/LoginPage";
 
 function Router() {
   return useRoutes([
@@ -38,6 +39,10 @@ function Router() {
     {
       path: "/testing",
       element: <TestingPage />,
+    },
+    {
+      path: "/login",
+      element: <LoginPage />,
     },
   ]);
 }

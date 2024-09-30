@@ -1,9 +1,10 @@
-import {Stack, styled} from "@mui/material";
+import {List, ListItem, Stack, styled} from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline, createTheme } from "@mui/material";
+import { CssBaseline, createTheme, CardContent } from "@mui/material";
 import PropTypes from "prop-types";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import TestingLayout from "../components/TestingLayout";
 
 import TestingSideBar from "../components/TestingSideBar" ;
 
@@ -44,6 +45,7 @@ function TestingPage() {
         <>
             <TestingPageThemeProvider>
             <TestingSideBar />
+            <TestingLayout/>
             </TestingPageThemeProvider>
         </>
     );
