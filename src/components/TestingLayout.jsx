@@ -34,7 +34,7 @@ const CustomPointerAnswer = styled(Card)(({active}) => ({
     height: '20px',
     borderRadius: '50%',
     border: '1.5px solid black',
-    backgroundColor: active === "true" ? '#005DD6' : '#D9D9D9',
+    backgroundColor: active ? '#005DD6' : '#D9D9D9',
     marginRight: '10px',
     cursor: "pointer"
 }))
@@ -60,10 +60,13 @@ function TestingLayout(testid) {
 
     const questions = data.find(t => t.testID == testid).questions;
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState({});
 
-    const handleAnswerClick = (index) => {
-        setSelectedIndex(index);
+    const handleAnswerClick = (questionNo, index) => {
+        setSelectedIndex((preSelected) => ({
+            ...preSelected,
+            [questionNo]: index,
+        }));
     }
 
     return (
@@ -83,30 +86,22 @@ function TestingLayout(testid) {
                             fontSize: 26,
                             fontWeight: "bold"
                         }}
-                        key={item.detail}
+                        key={item.questionNo}
                     >
                         <h4>Câu {index+1}: {item.detail}</h4>
 
-                        { item.answers.map((answer, index) => (
+                        { item.answers.map((answer, ansindex) => (
                             <ListItem
-                                key={item.questionNo}
+                                key={`${item.questionNo}-${ansindex}`}
                             >
                             
                             <CustomListAnswersButton
-                                active={
-                                    selectedIndex === index
-                                    ? "true"
-                                    : "false"
-                                }
-                                onClick={() => handleAnswerClick(index)}
+                                onClick={() => handleAnswerClick(item.questionNo, ansindex)}
                             >
                                 <CustomPointerAnswer
                                     active={
-                                        selectedIndex === index
-                                        ? "true"
-                                        : "false"
+                                        selectedIndex[item.questionNo] === ansindex
                                     }
-                                    onClick={() => handleAnswerClick(index)}
                                 />
                                 <ListItemText
                                     disableTypography
@@ -115,7 +110,7 @@ function TestingLayout(testid) {
                                         fontSize: "18px",
                                         fontWeight: "regular"
                                     }}
-                                    primary={`${TextAnswer({index})}. ${answer}`}
+                                    primary={`${TextAnswer({index: ansindex})}. ${answer}`}
                                 />                            
                             </CustomListAnswersButton>
                         </ListItem>
