@@ -31,7 +31,7 @@ const CustomListQuestionButton = styled(ListItemButton)(({active}) => ({
     fontWeight: "100",
     fontSize: "50",
     backgroundColor: active == "true" ? "#D9D9D9" : "#2E3236",
-    border: "solid #D9D9D9",
+    border: "1.0px solid #D9D9D9",
     borderRadius: "15px",
     textAlign: "center",
     

@@ -6,6 +6,8 @@ import HistoryPage from "../pages/HistoryPage";
 import RankingPage from "../pages/RankingPage";
 import TestingPage from "../pages/TestingPage";
 import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+
 
 function Router() {
   return useRoutes([
@@ -44,6 +46,10 @@ function Router() {
       path: "/login",
       element: <LoginPage />,
     },
+    {
+      path: "/register",
+      element: <RegisterPage/>
+    }
   ]);
 }
 
