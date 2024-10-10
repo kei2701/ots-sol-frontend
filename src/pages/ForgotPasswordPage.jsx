@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./../assets/OTS_banner_blue.png";
-import CustomTextField from "./../components/CustomTextField";
+import CustomTextField from "../components/CustomTextField";
 import loginbanner from "./../assets/login.jpg"
 import VietnamIcon from "./../assets/vietnam.png";
 import {
@@ -50,7 +50,7 @@ function RegisterPage() {
         
                 <Box component="img" src={logo} sx={{width: "600px", objectFit: "cover", paddingLeft: "120px", display: "flex", alignItems: "center", justifyContent: "center"}}/>
                 
-                <h4 style={{fontWeight: "normal"}}> Vui lòng nhập thông tin đăng ký người dùng </h4>
+                <h4 style={{fontWeight: "normal"}}> Vui lòng nhập mật khẩu mới </h4>
 
                 <CardContent
                     sx={{
@@ -61,15 +61,6 @@ function RegisterPage() {
                         gap: "20px"
                     }}
                 >
-                    <CustomTextField
-                        backgroundColor="#E9E9E9"
-                        placeHolderColor="#989898"
-                        width="360px"
-                        border="1.0px solid black"
-                        borderRadius="18px"
-                        placeholder={"Tên đăng nhập"}
-                        startIcon={<PersonIcon style={{color: "#000000"}}/>}
-                    />
                     <CustomTextField
                         backgroundColor="#E9E9E9"
                         placeHolderColor="#989898"
@@ -104,7 +95,7 @@ function RegisterPage() {
                             textAlign: "center",
                         }}
                     >
-                        Đăng ký
+                        Xác nhận đổi mật khẩu
                     </Button>
                 </CardContent>
             </CardContent>

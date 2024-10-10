@@ -7,6 +7,7 @@ import RankingPage from "../pages/RankingPage";
 import TestingPage from "../pages/TestingPage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
+import ForgotPasswordPage from "../pages/ForgotPasswordPage"
 
 
 function Router() {
@@ -49,6 +50,10 @@ function Router() {
     {
       path: "/register",
       element: <RegisterPage/>
+    },
+    {
+      path: "/forgotpw",
+      element: <ForgotPasswordPage/>
     }
   ]);
 }

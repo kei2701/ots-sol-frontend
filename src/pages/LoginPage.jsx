@@ -9,6 +9,11 @@ import {
     CardContent,
 } from "@mui/material";
 
+import PersonIcon from '@mui/icons-material/Person';
+import LockPersonIcon from '@mui/icons-material/LockPerson';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+
 function LoginPage() {
     return (
         <Box
@@ -32,7 +37,8 @@ function LoginPage() {
                     width: "40%",
                     display: "flex",
                     flexDirection: "column",
-                    borderRadius: "16px"
+                    borderRadius: "16px",
+                    backgroundColor: "#E7F2FF"
                 }}
             >
                     <h4 style={{ fontWeight:"normal", alignItems: "center", marginLeft: "auto"}}>
@@ -51,24 +57,28 @@ function LoginPage() {
                         width: "300px",
                         display: "flex",
                         flexDirection: "column",
-                        gap: "10px"
+                        gap: "20px"
                     }}
                 >
                     <CustomTextField
-                        backgroundColor="#E9E9E9"
+                        backgroundColor="#FFFFFF"
                         placeHolderColor="#989898"
                         width="300px"
                         border="1.0px solid black"
                         borderRadius="18px"
                         placeholder={"Tên đăng nhập"}
+                        startIcon={<PersonIcon style={{color: "#000000"}}/>}
                     />
                     <CustomTextField
-                        backgroundColor="#E9E9E9"
+                        backgroundColor="#FFFFFF"
                         placeHolderColor="#989898"
                         width="300px"
                         border="1.0px solid black"
                         borderRadius="18px"
                         placeholder={"Nhập mật khẩu"}
+                        startIcon={<LockPersonIcon style={{color: "#000000"}}/>}
+                        endIcon={<RemoveRedEyeIcon style={{color: "#000000"}}/>}
+                        //endIcon={<VisibilityOffIcon style={{color: "#000000"}}/>}
                     />
                     <a href="/forgot-password-user" 
                         style={{
